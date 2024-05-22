@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false, // 위에 빨간띠 제거
       home: MyHomePage(),
     );
@@ -31,11 +31,11 @@ class _MyHomePageState extends State<MyHomePage> {
   int _selectdeIndex = 0;
 
   final List<Widget> _screens = [
-    Tab1Screen(),
-    Tab2Screen(),
-    Tab3Screen(),
-    Tab4Screen(),
-    Tab5Screen(),
+    const Tab1Screen(),
+    const Tab2Screen(),
+    const Tab3Screen(),
+    const Tab4Screen(),
+    const Tab5Screen(),
   ];
 
   void _onItemTapped(int index) {
@@ -47,7 +47,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
             'Instargram',
             style: TextStyle(
               fontSize: 30
@@ -55,20 +55,20 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         actions: [
           IconButton(
-            icon: Icon(Icons.favorite,size: 40,color: Colors.black,),
+            icon: const Icon(Icons.favorite,size: 40,color: Colors.black,),
 
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => FirstScreen()),
+                MaterialPageRoute(builder: (context) => const FirstScreen()),
               );            },
           ),
           IconButton(
-            icon: Icon(Icons.send,size: 40,color: Colors.black,),
+            icon: const Icon(Icons.send,size: 40,color: Colors.black,),
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => SecondScreen()),
+                MaterialPageRoute(builder: (context) => const SecondScreen()),
               );            },
           ),
         ],
@@ -86,7 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
         selectedItemColor: Colors.blue, // 선택항목 색 바꾸기
         currentIndex: _selectdeIndex,
         onTap: _onItemTapped,
-        items: [
+        items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home, color: Colors.black), label: 'Tab1'),
           BottomNavigationBarItem(icon: Icon(Icons.search, color: Colors.black), label: 'Tab2'),
           BottomNavigationBarItem(icon: Icon(Icons.movie, color: Colors.black), label: 'Tab3'),
@@ -99,12 +99,14 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 
 class Tab1Screen extends StatelessWidget {
+  const Tab1Screen({super.key});
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Container(
+        // child: Container(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             // crossAxisAlignment: CrossAxisAlignment.center,
@@ -112,71 +114,73 @@ class Tab1Screen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+
                   Container(
-                    width: 80,
-                    height: 80,
-                    decoration: BoxDecoration(
+                    width: 70,
+                    height: 70,
+                    decoration: const BoxDecoration(
                         borderRadius: BorderRadius.all(
                           Radius.circular(200),
                         ),
-                        color: const Color(0xff333333)
+                        color: Color(0xff333333)
                     ),
                   ),
-                  SizedBox(
-                      width: 20
+                  const SizedBox(
+                      width: 15
                   ),
                   Container(
-                    width: 80,
-                    height: 80,
-                    decoration: BoxDecoration(
+                    width: 70,
+                    height: 70,
+                    decoration: const BoxDecoration(
                         borderRadius: BorderRadius.all(
                           Radius.circular(200),
                         ),
-                        color: const Color(0xff333333)
+                        color: Color(0xff333333)
                     ),
                   ),
-                  SizedBox(
-                      width: 20
+                  const SizedBox(
+                      width: 15
                   ),
                   Container(
-                    width: 80,
-                    height: 80,
-                    decoration: BoxDecoration(
+                    width: 70,
+                    height: 70,
+                    decoration: const BoxDecoration(
                         borderRadius: BorderRadius.all(
                           Radius.circular(200),
                         ),
-                        color: const Color(0xff333333)
+                        color: Color(0xff333333)
                     ),
                   ),
-                  SizedBox(
-                      width: 20
+                  const SizedBox(
+                      width: 15
                   ),
                   Container(
-                    width: 80,
-                    height: 80,
-                    decoration: BoxDecoration(
+                    width: 70,
+                    height: 70,
+                    decoration: const BoxDecoration(
                         borderRadius: BorderRadius.all(
                           Radius.circular(200),
                         ),
-                        color: const Color(0xff333333)
+                        color: Color(0xff333333)
                     ),
                   ),
-                  SizedBox(
-                      width: 20
+                  const SizedBox(
+                      width: 15
                   ),
                   Container(
-                    width: 80,
-                    height: 80,
-                    decoration: BoxDecoration(
+                    width: 70,
+                    height: 70,
+                    decoration: const BoxDecoration(
                         borderRadius: BorderRadius.all(
                           Radius.circular(200),
                         ),
-                        color: const Color(0xff333333)
+                        color: Color(0xff333333)
                     ),
                   ),
+
                 ],
               ),
-              Text(
+              const Text(
                 ' ',
                 style: TextStyle(
                     fontSize: 30
@@ -190,43 +194,51 @@ class Tab1Screen extends StatelessWidget {
               ),
             ],
           ),
-        ),
+        // ),
       ),
     );
   }
 }
 
 class Tab2Screen extends StatelessWidget {
+  const Tab2Screen({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text('Tab 2 Content'),
     );
   }
 }
 
 class Tab3Screen extends StatelessWidget {
+  const Tab3Screen({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text('Tab 3 Content'),
     );
   }
 }
 
 class Tab4Screen extends StatelessWidget {
+  const Tab4Screen({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text('Tab 4 Content'),
     );
   }
 }
 
 class Tab5Screen extends StatelessWidget {
+  const Tab5Screen({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text('Tab 5 Content'),
     );
   }

@@ -8,10 +8,10 @@ class FirstScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: Text('activity'),
+        title: const Text('activity'),
       ),
-      body: Center(
-        child: Container(
+      body: const Center(
+        // child: Container(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -23,7 +23,7 @@ class FirstScreen extends StatelessWidget {
               ),
             ],
           ),
-        ),
+        // ),
       ),
     );
   }
